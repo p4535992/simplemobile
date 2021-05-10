@@ -1,0 +1,59 @@
+{
+	"author": "Handyfon, Sunspots",
+	"keywords": [
+		"layout",
+		"dnd",
+		"vtt",
+		"foundry"
+	],
+	"name": "simplemobile",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node-sass --watch src/scss -o css",
+		"build": "gulp build && gulp link && node-sass src/scss -o dist & postcss dist/mobile.css -u autoprefixer --no-map -d dist/",
+		"package": "gulp package",
+		"build:watch": "gulp watch",
+		"clean": "gulp clean && gulp link --clean",
+		"update": "npm install --save-dev @league-of-foundry-developers/foundry-vtt-types@fvtt-0.7.9",
+		"build:install": "gulp build && gulp link",
+		"clean:real": "gulp clean && gulp unlink",
+		"update-types": "npm install --save-dev @league-of-foundry-developers/foundry-vtt-types@fvtt-0.7.9",
+		"publish": "gulp publish"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Handyfon/simplemobile.git"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/Handyfon/simplemobile/issues"
+	},
+	"homepage": "https://github.com/Handyfon/simplemobile",
+	"version": "0.2.2",
+	"devDependencies": {
+		"@league-of-foundry-developers/foundry-vtt-types": "^0.7.9-6",
+		"archiver": "5.3.0",
+		"autoprefixer": "^9.1.0",
+		"build-tools": "gitlab:fvtt-modules-lab/build-tools",
+		"chalk": "^4.1.0",
+		"cssnano": "4.1.10",
+		"eslint": "^7.16.0",
+		"fs-extra": "^9.0.1",
+		"gulp": "^4.0.2",
+		"gulp-git": "^2.10.1",
+		"gulp-less": "^4.0.1",
+		"gulp-sass": "^4.1.0",
+		"gulp-typescript": "^6.0.0-alpha.1",
+		"json-stringify-pretty-compact": "^2.0.0",
+		"node-sass": "^5.0.0",
+		"postcss": "^8.2.9",
+		"sass": "^1.32.8",
+		"teq-tonic": "*",
+		"typescript": "^4.2.3",
+		"yargs": "^15.4.1"
+	},
+	"dependencies": {
+		"postcss-cli": "^8.1.0",
+		"postcss-cli-simple": "^3.1.0"
+	}
+}

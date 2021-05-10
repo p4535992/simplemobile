@@ -1,0 +1,608 @@
+/* Remove logo */
+.simplemobile img#logo {
+  display: none;
+}
+
+.simplemobile img.profile {
+	display: none;
+}
+
+.simplemobile div#mobile-controls {
+    display: none !important;
+}
+.simplemobile i.fas.fa-mobile-alt {
+    color: #00ffa1;
+}
+
+/*PHONE START @media only screen and (max-width: 1024px) { */
+
+  .simplemobile div#mobile-controls {
+    display: block !important;
+}
+/*General Improvements*/
+.simplemobile .rollable {
+    background: #bf4b00;
+    color: #f0f0e0 !important;
+    text-align: -webkit-center;
+    font-size: 15px !important;
+    border-radius: 4px;
+}
+.simplemobile .window-app .window-header .window-title {
+    margin: 0;
+    word-break: break-all;
+    max-width: 66vw;
+}
+.simplemobile li.directory-item.folder.flexcol.collapsed {
+    height: 40px !important;
+}
+.simplemobile input:focus {
+    transform: scale(1.3);
+    transition: 0.2s;
+}
+.simplemobile textarea:focus {
+    transform: scale(1.3);
+    transition: 0.2s;
+}
+.simplemobile button:focus {
+    outline: none;
+    box-shadow: 0 0 5px red;
+    background: #bf4b00;
+    transform: scale(1.1);
+    transition: 0.1s;
+}
+/*PF2 moved to _pf2.scss*/
+
+/* DND ONLY moved to _dnd5e.scss *7
+
+/* ------------------------------------ */
+/*  START Mobile Improvement Apps       */
+/* ------------------------------------ */
+
+/* ------------------------------------ */
+/*                Core UI               */
+/* ------------------------------------ */
+
+/* FVTT uses non-standard webkit CSS scroll bars
+* 'thin' scrollbars on standards-compliant browsers(firefox)
+*/
+.simplemobile * {
+  scrollbar-width: thin;
+}
+
+.simplemobile html {
+  background: black;
+}
+
+.simplemobile :root {
+  --navigationHeight: 35px;
+  --vh: 1vh;
+  --viewHeight: calc(calc(var(--vh) * 100) - var(--navigationHeight));
+}
+
+.simplemobile ::-webkit-scrollbar {
+  height: 6px;
+}
+
+/* Better loading */
+.simplemobile #chat-log .message {
+  background-color: #d8d7cc;
+}
+
+@media screen and (max-width: 800px) {
+  .simplemobile html {
+    overflow: hidden;
+  }
+  .simplemobile body {
+    height: calc(var(--vh) * 100);
+    position: relative;
+  }
+  .simplemobile #sidebar:not(.collapsed) {
+    width: 100%;
+    z-index: 80;
+    height: var(--viewHeight) !important;
+    top: 0;
+    right: 0;
+    /* background: #333; */
+    border: none;
+    transform: translateX(calc(100%));
+    box-shadow: none;
+  }
+
+  .simplemobile .show-sidebar #sidebar {
+    transform: translateX(0);
+  }
+
+  .simplemobile #sidebar-tabs > .item {
+    border-radius: 0;
+    flex: 1;
+  }
+  .simplemobile #sidebar:not(.collapsed) #sidebar-tabs > .item.active {
+    border-color: #ff6400;
+    box-shadow: 0 -6px 6px inset #ff6400;
+  }
+  .simplemobile #sidebar:not(.collapsed) #sidebar-tabs > .collapse {
+    display: none;
+  }
+
+  .simplemobile #sidebar.collapsed {
+    display: none;
+  }
+
+  .simplemobile #sidebar:not(.collapsed) {
+    display: flex !important;
+  }
+
+  .simplemobile #navigation {
+    width: calc(100% - 120px);
+  }
+
+  .simplemobile #navigation #scene-list {
+    min-width: 110px;
+  }
+
+  .simplemobile #players {
+    bottom: 120px;
+    left: 2px;
+  }
+
+  .simplemobile #players.collapsed {
+    width: 42px;
+    height: 26px;
+    overflow: hidden;
+  }
+  .simplemobile #players h3 {
+    margin: 0;
+  }
+
+  .simplemobile #hotbar {
+    z-index: 1000;
+    left: 0;
+    bottom: var(--navigationHeight);
+    height: auto;
+    width: 100%;
+    max-width: none;
+    background: #333;
+    padding: 10px 5px;
+    pointer-events: all;
+    box-shadow: 0 0 10px #000c;
+    border-radius: 10px 10px 0 0;
+    transform: translateY(calc(100% + var(--navigationHeight)));
+  }
+
+  .simplemobile body.show-hotbar #hotbar {
+    transform: translateY(0);
+  }
+
+  .simplemobile #hotbar .bar-controls {
+    background: none;
+    border: none;
+    margin: 0;
+    justify-content: space-evenly;
+    max-height: max(60px, calc(100% - 36));
+    box-shadow: none;
+  }
+
+  .simplemobile #hotbar #action-bar {
+    height: auto;
+  }
+
+  .simplemobile #hotbar #macro-list {
+    flex: 1;
+    border: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+  }
+  .simplemobile #hotbar .macro {
+    margin: 2px;
+    background: RGBA(0, 0, 0, 0.3);
+    border-radius: 0;
+    border-color: RGBA(0, 0, 0, 0.2);
+  }
+
+  .simplemobile #hotbar .bar-controls a.page-control,
+  .simplemobile #hotbar .bar-controls span.page-number {
+    flex: 0 1;
+  }
+
+  .simplemobile #hotbar .bar-controls #bar-toggle {
+    display: none;
+  }
+
+  .simplemobile #notifications {
+    width: calc(100% - 12px);
+    left: 6px;
+  }
+
+  .simplemobile .notification {
+    background: RGBA(0, 0, 0, 0.9);
+  }
+
+  .simplemobile .notification.info {
+    background: RGBA(47, 80, 132, 0.9);
+  }
+
+  .simplemobile .notification.warning {
+    background: RGBA(214, 150, 0, 0.9);
+  }
+
+  .simplemobile .notification.error {
+    background: RGBA(105, 0, 8, 0.9);
+  }
+
+  .simplemobile #loading {
+    width: calc(100vw - 20px);
+    top: unset !important;
+    bottom: calc(var(--navigationHeight) + 10px);
+    left: 10px;
+  }
+  .simplemobile #loading #context {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: calc(100% - 60px);
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .simplemobile #pause {
+    transform: scale(0.85);
+  }
+}
+
+.simplemobile #settings {
+  overflow-y: scroll;
+}
+
+.simplemobile .app.sidebar-popout .directory-list {
+  max-height: initial;
+}
+
+.simplemobile .app.filepicker form {
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.simplemobile .app.filepicker .filepicker-body {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.simplemobile .window-app.image-popout .form-group {
+  position: unset;
+}
+
+.simplemobile .window-app.image-popout .form-group.title {
+  flex: 0 1;
+  order: 1;
+  margin: 0 auto 5px auto;
+}
+
+.simplemobile .window-app.image-popout .lightbox-image {
+  order: 2;
+  flex: 1;
+}
+
+.simplemobile .window-app.image-popout .form-group.picker {
+  order: 3;
+  flex: 0 1;
+  margin: 5px auto 0 auto;
+}
+
+.simplemobile .window-app .window-header {
+  max-width: 100vw;
+  overflow-x: auto;
+}
+
+.simplemobile .window-app .window-header .window-title {
+  margin: 0;
+  word-break: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ------------------------------------ */
+/*               Hide UI                */
+/* ------------------------------------ */
+.simplemobile #sidebar,
+.simplemobile #controls,
+.simplemobile #navigation,
+.simplemobile #hotbar,
+.simplemobile #players,
+.simplemobile #logo {
+  transition: transform 100ms ease-out;
+}
+
+.simplemobile body.hide-hud #sidebar {
+  transform: translateX(150%);
+}
+
+.simplemobile body.show-sidebar #controls,
+.simplemobile body.hide-hud #controls {
+  transform: translateX(-200%);
+}
+
+.simplemobile body.show-sidebar #navigation,
+.simplemobile body.hide-hud #navigation {
+  transform: translateY(-200%);
+}
+
+.simplemobile body.show-sidebar #players,
+.simplemobile body.hide-hud #players {
+  transform: translateX(-200%);
+}
+.simplemobile body.hide-hud #hotbar {
+  transform: translateY(200%);
+}
+
+.simplemobile body.hide-hud #logo {
+  transform: scale(0.5) translateX(-50%) translateY(-50%);
+}
+
+.simplemobile body.show-sidebar #logo {
+  display: none;
+}
+
+.simplemobile body.hide-hud .window-selector.has-items {
+  transform: translateY(calc(100% + 60px));
+}
+
+.simplemobile body.hide-hud .mobile-navigation {
+  transform: translateY(calc(100% + 20px));
+}
+
+.simplemobile body.hide-hud .mobile-menu,
+.simplemobile body.hide-hud .window-selector {
+  transform: translateY(calc(100% + var(--navigationHeight) + 20px));
+}
+
+/* ------------------------------------ */
+/*              Application             */
+/* ------------------------------------ */
+@media screen and (max-width: 800px) {
+  .simplemobile .app {
+    background: #333333ee;
+    border-radius: 0;
+  }
+
+  /* .simplemobile .window-content form > footer {
+    margin-right: 40px;
+    flex: 0;
+  }
+
+  .simplemobile .sidebar-tab .directory-footer {
+    margin: 6px 40px !important;
+  } */
+
+  .simplemobile #client-settings section.content .settings-list {
+    max-height: calc(100vh - 120px);
+  }
+
+  .simplemobile .window-app:not(.minimized) {
+    width: 100% !important;
+    height: var(--viewHeight) !important;
+    left: 0 !important;
+    top: 0 !important;
+    margin: 0;
+    min-height: var(--viewHeight) !important;
+    min-width: 100% !important;
+    overflow-x: scroll;
+  }
+
+  .simplemobile .window-app .window-resizable-handle {
+    display: none;
+  }
+
+  .simplemobile .minimized {
+    visibility: hidden;
+  }
+
+  .simplemobile .dialog .dialog-content {
+    overflow: scroll;
+    flex: 0 1 auto;
+  }
+
+  .simplemobile .dialog .dialog-buttons {
+    flex: none;
+    padding-top: 5px;
+  }
+}
+
+/* ------------------------------------ */
+/*        Mobile Improvement Apps       */
+/* ------------------------------------ */
+
+.simplemobile .drawer {
+  z-index: 1000;
+  position: absolute;
+  bottom: var(--navigationHeight);
+  width: 100%;
+  max-width: 450px;
+  right: 0;
+  transform: translateY(calc(100% + 60px));
+  transition: transform ease-out 100ms;
+  visibility: hidden;
+  box-shadow: 0 0 15px #000c;
+}
+
+@media screen and (max-width: 800px) {
+  .simplemobile .drawer {
+    visibility: unset;
+  }
+}
+
+.simplemobile .drawer.open {
+  z-index: 1001;
+  transform: translateY(0);
+}
+
+.simplemobile .window-selector nav {
+  width: 100%;
+  padding: 0 1em;
+  background: #333;
+  max-height: calc(100vh - var(--navigationHeight));
+  overflow-y: auto;
+  pointer-events: auto;
+}
+
+@media screen and (max-width: 450px) {
+  .simplemobile .window-selector nav {
+    border-width: 1px 0px 0px 0px;
+  }
+}
+
+.simplemobile .window-selector .window-list {
+  padding: 0;
+}
+
+.simplemobile .window-selector .window-row {
+  display: flex;
+  margin-bottom: 2px;
+  border: 1px solid RGBA(0, 0, 0, 0.2);
+  background: #00000035;
+}
+
+.simplemobile .window-selector .window-row:hover {
+  box-shadow: 0 0 3px #000;
+}
+
+.simplemobile .window-selector .window-list .window-close {
+  width: 2.5em;
+  max-width: 2.5em;
+  text-align: center;
+}
+.simplemobile .window-selector .window-list .window-close:hover {
+  text-shadow: 0 0 8px red;
+}
+.simplemobile .window-selector button {
+  text-align: left;
+  background: none;
+  border: none;
+  color: #f0f0e0;
+  border-radius: 0;
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  line-height: 30px;
+}
+
+.simplemobile .window-selector button:hover {
+  box-shadow: none;
+}
+
+.simplemobile .window-selector button i {
+  margin: 0;
+}
+
+.simplemobile .window-selector .minimize-all {
+  text-align: center;
+}
+
+.simplemobile .display-modes-toggle {
+  z-index: 1;
+  position: absolute;
+  right: 5px;
+  top: 380px;
+  width: 30px;
+  height: 30px;
+  font-size: 90%;
+  line-height: 1.6em;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #000;
+  text-align: center;
+  font-weight: bold;
+  background: #333333ee;
+  color: #f0f0e0;
+  box-shadow: 0 0 20px #000;
+  cursor: pointer;
+  border-radius: 3px;
+  pointer-events: auto;
+}
+
+.simplemobile .display-modes-toggle i {
+  margin: 0;
+}
+
+.simplemobile .mobile-navigation {
+  display: none !important; /* Spawns before CSS with inline style */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  z-index: 1002;
+  background-color: #333;
+  position: absolute;
+  top: var(--viewHeight);
+  align-items: stretch;
+  transition: transform ease-in 50ms;
+  list-style: none;
+  color: #f0f0e0;
+  font-weight: normal;
+  overflow-x: auto;
+  overflow-y: hidden;
+  font-size: 80%;
+  box-shadow: 0 0 10px #000c;
+}
+
+.simplemobile .mobile-navigation li {
+  height: var(--navigationHeight);
+  flex: 1;
+  padding: 0.5em 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  white-space: nowrap;
+  opacity: 0.6;
+}
+
+.simplemobile .mobile-navigation li i {
+  font-size: 120%;
+}
+
+.simplemobile .mobile-navigation li.active {
+  opacity: 1;
+}
+
+.simplemobile .mobile-navigation li:hover,
+.simplemobile .mobile-navigation li:focus,
+.simplemobile .mobile-navigation li:active {
+  opacity: 0.7;
+  background: RGBA(0, 0, 0, 0.1);
+}
+
+.simplemobile .mobile-navigation li.active:not(.toggle) {
+  color: #ff6400;
+}
+
+.simplemobile .mobile-navigation li.active:not(.toggle) i {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 800px) {
+  .simplemobile .mobile-navigation {
+    display: flex !important;
+  }
+}
+
+.simplemobile .mobile-menu {
+  display: flex !important;
+  margin: 0;
+  padding: 0;
+  background-color: #333;
+  align-items: stretch;
+  list-style: none;
+  color: #f0f0e0;
+  font-weight: bold;
+  overflow-x: auto;
+  overflow-y: hidden;
+  font-size: 80%;
+}
+
+/* ------------------------------------ */
+/*  END Mobile Improvement Apps       */
+/* ------------------------------------ */

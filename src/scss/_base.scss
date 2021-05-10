@@ -1,0 +1,52 @@
+// Shared
+@import "./shared/buttons";
+@import "./shared/directory";
+@import "./shared/folder";
+@import "./shared/form-elements";
+@import "./shared/form-group";
+@import "./shared/panel";
+@import "./shared/states";
+@import "./shared/tabs";
+@import "./shared/typography";
+@import "./shared/utils";
+@import "./shared/window";
+
+// Sass Variables
+$global-box-shadow: 0 2px 4px color("black");
+$global-text-shadow: 1px 1px 2px color("black"), -1px -1px 2px color("black");
+
+// Override Sass function
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+// Override Sass min()
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+
+// div#mobile-controls {
+//   display: none !important;
+// }
+// i.fas.fa-mobile-alt {
+//   color: #00ffa1;
+// }
+
+/* Remove logo */
+// img#logo {
+//   display: none;
+// }
+
+// img.profile {
+// 	display: none;
+// }
+
+// ::before {
+//   font-size: 20px;
+// }
+
+// div#mobile-controls {
+//   display:none;
+// }
+
+
