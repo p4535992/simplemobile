@@ -2,6 +2,8 @@
 
 # Simple Mobile for Foundry VTT
 
+## THIS MODULE IS STILL IN BETA IF YOU WANT TO CONTIBUTE ADD SOME BOUNTY FOR DEVELOPING
+
 The scope of this project is to "upgrade" the work done by [Handyfon](https://github.com/Handyfon), by separate the style based to system, module, components, ecc.
 
 The starting template of this project was inspired from the marvelous project ui [Ernie's Modern UI](https://github.com/ernieayala/ernies-modern-layout)
@@ -14,10 +16,9 @@ Current state: Useful for general UI interaction. Map interaction is working, bu
 
 # Developing (To Do list)
 
-- [DONE simply add a required on the module.json manifest] Integration with [Touch VTT](https://github.com/Oromis/touch-vtt)
-- [DONE updated to 2021-04-09 version 0.2.3] Integration with [simplemobile](https://github.com/Handyfon/simplemobile)
-- Add a mobile style for some module (CUB, MidiQOL, Better Rolls)
+- Add a mobile style for some module (CUB, MidiQOL, Better Rolls, ecc)
 - Integration with [VTTExternalActorViewer](https://github.com/ardittristan/VTTExternalActorViewer) for load only the character sheet without anything else (suggestion Brent Rogers on trello)
+- Integrated a full internazionalization i18n
 
 ## if you want to contribute financially check out the 
 
@@ -54,6 +55,9 @@ This module uses the [TouchVTT](https://github.com/Oromis/touch-vtt). It is a ha
 
 This module uses the [Zoom/Pan Options](https://github.com/itamarcu/ZoomPanOptions). It is a hard dependency and it is recommended for the best experience and compatibility with other modules.
 
+### Mobile Improvements
+
+This module uses the [mobile-improvement](https://gitlab.com/fvtt-modules-lab/mobile-improvements). It is a hard dependency and it is recommended for the best experience and compatibility with other modules.
 # Features (TO DO)
 
 # Personal Note

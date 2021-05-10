@@ -2,7 +2,7 @@
 	"name": "simplemobile",
 	"title": "Simple-Mobile",
 	"description": "Adds mobile support",
-	"version": "0.2.2",
+	"version": "0.3.0",
 	"author": "Handyfon#8390",
 	"styles": [
     	"mobile.css"
@@ -28,19 +28,22 @@
 		}
 	],
 	"url": "https://github.com/Handyfon/simplemobile/tree/master",
-  	"manifest": "https://raw.githubusercontent.com/Handyfon/simplemobile/master/src/module.json",
-  	"download": "https://raw.githubusercontent.com/Handyfon/simplemobile/master/package/simplemobile-v0.2.0.zip",
+  "manifest": "https://raw.githubusercontent.com/Handyfon/simplemobile/master/src/module.json",
+  "download": "https://raw.githubusercontent.com/Handyfon/simplemobile/master/package/simplemobile-v0.3.0.zip",
 	"license": "MIT",
 	"readme": "https://github.com/Handyfon/simplemobile/tree/master",
 	"changelog": "https://raw.githubusercontent.com/Handyfon/simplemobile/master/changelog.md",
-  	"bugs": "https://github.com/Handyfon/simplemobile/issues",
-  	"allowBugReporter": true,
-  	"dependencies": [
-    {
-      	"name": "touch-vtt"
-    },
-	{
-		"name": "zoom-pan-options"
-	}
+  "bugs": "https://github.com/Handyfon/simplemobile/issues",
+  "allowBugReporter": true,
+  "dependencies": [
+      {
+        "name": "touch-vtt"
+      },
+      {
+        "name": "zoom-pan-options"
+      },
+      {
+        "name": "mobile-improvements"
+      }
   ]
 }

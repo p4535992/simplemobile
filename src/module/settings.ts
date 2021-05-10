@@ -79,9 +79,18 @@ export const registerSettings = function () {
     // EXPLICIT SETTINGS FOR CSS ON SPECIFIC SYSTEM
     // ============================================
 
+    game.settings.register(MODULE_NAME, 'enableMobileControls', {
+        name: 'Enable/Disable Mobile Controls',
+        hint: 'Enable/Disable Mobile Controls',
+        scope: 'client',
+        config: true,
+        default: isMobile(),
+        type: Boolean,
+    });
+
     game.settings.register(MODULE_NAME, 'loadMobile', {
-      name: "Load Simple mobile",
-      hint: "Load Simple Mobile",
+      name: "Enable/Disable Simple mobile",
+      hint: "Enable/Disable Simple Mobile",
       scope: 'client',
       config: true,
       default: isMobile(),
@@ -96,17 +105,25 @@ export const registerSettings = function () {
     });
 
     game.settings.register(MODULE_NAME, 'loadMobileSystemDnd5e', {
-      name: "Load System DND5e",
-      hint: "Load System DND5e",
+      name: "Enable/Disable Simple mobile for System DND5e",
+      hint: "Enable/Disable Simple mobile for System DND5e",
       scope: 'client',
       config: true,
       default: isMobile(),
       type: Boolean,
       onChange: (data) => {
-        if(data === true && document.getElementsByClassName('dnd5e').length >= 1){
-          for(var index=0; index < document.getElementsByClassName('dnd5e').length; index++){
-            if(!document.getElementsByClassName('dnd5e')[index].classList.contains('simplemobile')){
-              document.getElementsByClassName('dnd5e')[index].classList.add('simplemobile');
+        if(<boolean>game.settings.get(MODULE_NAME, 'loadMobile')){
+          if(data === true && document.getElementsByClassName('dnd5e').length >= 1){
+            for(var index=0; index < document.getElementsByClassName('dnd5e').length; index++){
+              if(!document.getElementsByClassName('dnd5e')[index].classList.contains('simplemobile')){
+                document.getElementsByClassName('dnd5e')[index].classList.add('simplemobile');
+              }
+            }
+          }else{
+            for(var index=0; index < document.getElementsByClassName('dnd5e').length; index++){
+              if(document.getElementsByClassName('dnd5e')[index].classList.contains('simplemobile')){
+                document.getElementsByClassName('dnd5e')[index].classList.remove('simplemobile');
+              }
             }
           }
         }else{

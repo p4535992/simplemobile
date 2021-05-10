@@ -68,11 +68,15 @@ export let readyHooks = async () => {
     });
 
     Hooks.on('canvasReady', function(){
+
+    if(<boolean>game.settings.get(MODULE_NAME, 'enableMobileControls')){
       function opencontrols() {
-        controls = new Controls();
-        controls.openDialog();
+          controls = new Controls();
+          controls.openDialog();
+      }
+      opencontrols();
     }
-    opencontrols();
+
     let charname = game.user.charname
     console.log("mobile initialised");
 
