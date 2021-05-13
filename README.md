@@ -10,9 +10,15 @@ The starting template of this project was inspired from the marvelous project ui
 
 This module is intended to make the UI more flexible for use with mobiles, tablets and other low-resolution devices.
 
-Current state: Useful for general UI interaction. Map interaction is working, but limited.
+This project should work alongside [mobile-improvements](https://gitlab.com/fvtt-modules-lab/mobile-improvements) . This Module work just fine but ONLY FOR THE CORE OF FOUNDRY and some funcionality is limited to DnD5e system. 
 
-**Simple Mobile is in a pre-release phase and may have breaking changes or change default settings without notice**
+The scope of this project is to avoid  collisions between modules styles and integrated some css mobile style for each module and system.
+
+So you can see as a collection of style for each specific system, module, components, ecc.
+
+This module is intended to make the UI more flexible for use with mobiles, tablets and other low-resolution devices for every system not only for DnD5e.
+
+Support for now will be limited to the chrome browser.
 
 # Developing (To Do list)
 

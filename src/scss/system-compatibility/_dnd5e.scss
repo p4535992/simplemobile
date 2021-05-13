@@ -213,14 +213,14 @@ margin-top: -36px;
 .simplemobile img.profile {
 display: none;
 }*/
-.simplemobile div#mobile-controls {
-  display: none !important;
-}
-.simplemobile div#mobile-container {
-  flex: 1;
-  width: 39%;
-  margin-left: 20px;
-}
+// .simplemobile div#mobile-controls {
+//   display: none !important;
+// }
+// .simplemobile div#mobile-container {
+//   flex: 1;
+//   width: 39%;
+//   margin-left: 20px;
+// }
 .simplemobile button.opencharsheet.controlbutton {
   height: 45px !important;
   width: 50px;
@@ -293,17 +293,17 @@ display: none;
   background: #752e00;
   border: 3px solid #bf4b00;
 }*/
-li.folder > .folder-header h3 {
+.simplemobile li.folder > .folder-header h3 {
   margin: 0;
   color: #FFF;
   background: unset !important;
   border: unset !important;
 }
-.playlist-controls {
+.simplemobile .playlist-controls {
   flex: 0 0 141px !important;
   justify-content: flex-end;
 }
-#journal li.journal .entity-name {
+.simplemobile #journal li.journal .entity-name {
   margin: 0 0.25em;
   border-bottom: 1px groove;
 }
@@ -455,23 +455,23 @@ display: none;
 }
 
 
-/*Mobile controls*/
-.simplemobile div#mobile-controls {
-height: 13vh !important;
-  position: fixed !important;
-  top: unset !important;
-  bottom: 4vh !important;
-  left: 6vw !important;
-  width: 83% !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  border: 1px solid #0000 !important;
-  display: block !important;
-  background: unset !important;
-  box-shadow: unset !important;
-  z-index: 30 !important;
-  transform: scale(1.2);
-}
+// /*Mobile controls*/
+// .simplemobile div#mobile-controls {
+// height: 13vh !important;
+//   position: fixed !important;
+//   top: unset !important;
+//   bottom: 4vh !important;
+//   left: 6vw !important;
+//   width: 83% !important;
+//   margin: 0 !important;
+//   padding: 0 !important;
+//   border: 1px solid #0000 !important;
+//   display: block !important;
+//   background: unset !important;
+//   box-shadow: unset !important;
+//   z-index: 30 !important;
+//   transform: scale(1.2);
+// }
 
 /*Style*/
 .simplemobile #hotbar #hotbar-directory-controls a {
@@ -605,34 +605,34 @@ height: 13vh !important;
 
 /*PHONE END*/
 
-.simplemobile .up {
-  height: unset !important;
-}
-.simplemobile .down {
-  height: unset !important;
-}
-.simplemobile div#mobile-controls > .window-header {
-  display: none !important;
-}
-.simplemobile div#mobile-controls > section.window-content {
-  box-shadow: unset !important;
-  background: #00000000;
-}
+// .simplemobile .up {
+//   height: unset !important;
+// }
+// .simplemobile .down {
+//   height: unset !important;
+// }
+// .simplemobile div#mobile-controls > .window-header {
+//   display: none !important;
+// }
+// .simplemobile div#mobile-controls > section.window-content {
+//   box-shadow: unset !important;
+//   background: #00000000;
+// }
 
-.simplemobile div#mobile-s {
-  display: flex;
-  box-shadow: 0 0 20px #000;
-  height: 12vh;
-}
-.simplemobile button.goup.controlbutton {
-  height: 33%;
-}
-.simplemobile button.goselect.controlbutton {
-  height: 33%;
-}
-.simplemobile button.godown.controlbutton {
-  height: 33%;
-}
+// .simplemobile div#mobile-s {
+//   display: flex;
+//   box-shadow: 0 0 20px #000;
+//   height: 12vh;
+// }
+// .simplemobile button.goup.controlbutton {
+//   height: 33%;
+// }
+// .simplemobile button.goselect.controlbutton {
+//   height: 33%;
+// }
+// .simplemobile button.godown.controlbutton {
+//   height: 33%;
+// }
 
 @media only screen and (max-width: 600px) {/* UNDER 600 PIXEL*/
   .simplemobile .item-image {

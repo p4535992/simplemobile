@@ -7,18 +7,18 @@
 	display: none;
 }
 
-.simplemobile div#mobile-controls {
-    display: none !important;
-}
+// .simplemobile div#mobile-controls {
+//     display: none !important;
+// }
 .simplemobile i.fas.fa-mobile-alt {
     color: #00ffa1;
 }
 
 /*PHONE START @media only screen and (max-width: 1024px) { */
 
-  .simplemobile div#mobile-controls {
-    display: block !important;
-}
+//   .simplemobile div#mobile-controls {
+//     display: block !important;
+// }
 /*General Improvements*/
 .simplemobile .rollable {
     background: #bf4b00;

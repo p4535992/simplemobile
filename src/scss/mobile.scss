@@ -33,7 +33,9 @@ body {
     /* CSS */
 
     // Base
-    @import "./mobile-phone.scss";
+    // Removed instead we use mobile improvements
+    // @import "./mobile-phone.scss";
+    @import "./mobile-phone-controls";
 
     // Components
     @import "./components/context-menu";
@@ -141,7 +143,9 @@ body {
     /* CSS */
 
     // Base
-    @import "./mobile-phone.scss";
+    // Removed instead we use mobile improvements
+    // @import "./mobile-phone.scss";
+    @import "./mobile-phone-controls";
 
     // Components
     @import "./components/context-menu";
@@ -249,7 +253,9 @@ body {
     /* CSS */
 
     // Base
-    @import "./mobile-phone.scss";
+    // Removed instead we use mobile improvements
+    // @import "./mobile-phone.scss";
+    @import "./mobile-phone-controls";
 
     // Components
     @import "./components/context-menu";
@@ -357,7 +363,9 @@ body {
     /* CSS */
 
     // Base
-    @import "./mobile-phone.scss";
+    // Removed instead we use mobile improvements
+    // @import "./mobile-phone.scss";
+    @import "./mobile-phone-controls";
 
     // Components
     @import "./components/context-menu";

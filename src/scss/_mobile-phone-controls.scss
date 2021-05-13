@@ -1,0 +1,61 @@
+/*Mobile controls*/
+
+// .simplemobile div#mobile-controls {
+//   display: none !important;
+// }
+.simplemobile div#mobile-controls {
+  display: block !important;
+}
+
+.simplemobile div#mobile-container {
+  flex: 1;
+  width: 39%;
+  margin-left: 20px;
+}
+
+.simplemobile div#mobile-controls {
+  height: 13vh !important;
+    position: fixed !important;
+    top: unset !important;
+    bottom: 4vh !important;
+    left: 6vw !important;
+    width: 83% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 1px solid #0000 !important;
+    display: block !important;
+    background: unset !important;
+    box-shadow: unset !important;
+    z-index: 30 !important;
+    transform: scale(1.2);
+}
+
+.simplemobile .up {
+  height: unset !important;
+}
+.simplemobile .down {
+  height: unset !important;
+}
+.simplemobile div#mobile-controls > .window-header {
+  display: none !important;
+}
+.simplemobile div#mobile-controls > section.window-content {
+  box-shadow: unset !important;
+  background: #00000000;
+}
+
+.simplemobile div#mobile-s {
+  display: flex;
+  box-shadow: 0 0 20px #000;
+  height: 12vh;
+}
+.simplemobile button.goup.controlbutton {
+  height: 33%;
+}
+.simplemobile button.goselect.controlbutton {
+  height: 33%;
+}
+.simplemobile button.godown.controlbutton {
+  height: 33%;
+}
+
